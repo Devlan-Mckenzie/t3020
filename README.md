@@ -21,3 +21,8 @@ Note, however, there is some missing data in some of the rows. The first few lin
 ### Errors
 
 There are three deliberate errors, marked E1, E2 and E3. Finding other (non-deliberate and unknown to me)  errors will get a bonus -- clearly add below this line in your copy of the README what the errors are and how you fixed them.
+
+E1 - changed the "for c in curr[2:9]" into "for c in curr[1:9]" this is so that T1 is included.
+E2 - changed the "for i in range(9)" into "for i in range(8)" this is because T8 does not follow monotonically behaviour as stated in the Readme.
+   - changed the "if curr[i] <= prev[i]" into "if curr[i] < prev[i]" this was because the monotonical behaviuor was able to be equal or greater than the previous, this would show an error if they were equal and it is now fixed.
+E3 - changed the "for d in curr_str" into "for d in curr_str[0:9]" this was because the curr_str was an array of sorts and thus requires an index to access its elements.
